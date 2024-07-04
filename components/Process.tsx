@@ -1,0 +1,137 @@
+"use client";
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { CanvasRevealEffect } from "./ui/CanvasReveatEffect";
+import { GiSupersonicArrow } from "react-icons/gi";
+
+export function Process() {
+  return (
+    <section className='py-20' id="experience">
+      <h1 className="heading">
+        My Problem-Solving {' '}
+        <span className="text-purple">
+          Methodology
+        </span>
+      </h1>
+      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full mx-auto gap-4">
+        <Card 
+          title="Planning & Strategy" 
+          icon={<AceternityIcon order="Phase 1" />}
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod mauris, at placerat justo ultrices nec. Nunc lobortis, purus id convallis euismod, lorem odio vestibulum eros, eget feugiat ante risus accumsan ex."
+        >
+          <CanvasRevealEffect
+            animationSpeed={5.1}
+            containerClassName="bg-emerald-900"
+          />
+        </Card>
+        <Card 
+          title="Development & Progress Update" 
+          icon={<AceternityIcon order="Phase 2"/>}
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod mauris, at placerat justo ultrices nec. Nunc lobortis, purus id convallis euismod, lorem odio vestibulum eros, eget feugiat ante risus accumsan ex."
+        >
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-black"
+            colors={[
+              [236, 72, 153],
+              [232, 121, 249],
+            ]}
+            dotSize={2}
+          />
+          {/* Radial gradient for the cute fade */}
+          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+        </Card>
+        <Card 
+          title="Development Launch" 
+          icon={<AceternityIcon order="Phase 3"/>}
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod mauris, at placerat justo ultrices nec. Nunc lobortis, purus id convallis euismod, lorem odio vestibulum eros, eget feugiat ante risus accumsan ex."
+        >
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-sky-600"
+            colors={[[125, 211, 252]]}
+          />
+        </Card>
+      </div>
+    </section>
+  );
+}
+
+const Card = ({
+  title,
+  icon,
+  desc,
+  children,
+}: {
+  title: string;
+  desc: string;
+  icon: React.ReactNode;
+  children?: React.ReactNode;
+}) => {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 h-[20rem] lg:h-[30rem] relative transition-all duration-300"
+    >
+      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+
+      <AnimatePresence>
+        {hovered && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="h-full w-full absolute inset-0"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="relative z-20">
+        <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+          {icon}
+        </div>
+        <h2 className="dark:text-white text-2xl text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+          {title}
+        </h2>
+         <h2 className="dark:text-white text-base text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+          {desc}
+        </h2>
+      </div>
+    </div>
+  );
+};
+
+const AceternityIcon = ({order}: {order:  string}) => {
+  return (
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-slate-950 px-7 py-1 text-sm font-bold text-white backdrop-blur-3xl ">
+            {order} <span className="ml-5"><GiSupersonicArrow/></span>
+          </span>
+      </button>
+    </div>
+  );
+};
+
+export const Icon = ({ className, ...rest }: any) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className={className}
+      {...rest}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+    </svg>
+  );
+};

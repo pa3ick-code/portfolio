@@ -164,14 +164,14 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Engineer",
+    desc: "Assisted in the development of a web-based platform using Nextjs, enhancing interactivity.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
+    title: "Mobile App Dev",
     desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
@@ -185,7 +185,7 @@ export const workExperience = [
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
+    title: "Web Developer",
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
@@ -209,3 +209,12 @@ export const socialMedia = [
     link: "https://www.linkedin.com/in/pa3ick/"
   },
 ];
+
+export const stack = [
+  {id: 1, img:"/tailwind.svg"},
+  {id: 2, img:"/typescript.svg"},
+  {id: 3, img:"/reactjs.svg"},
+  {id: 4, img:"/nextjs.svg"},
+  {id: 5, img:"/threejs.svg"},
+  {id: 6, img:"/graphql.svg"},
+]

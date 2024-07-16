@@ -17,7 +17,7 @@ export function Process() {
         <Card 
           title="Planning & Strategy" 
           icon={<AceternityIcon order="Phase 1" />}
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod mauris, at placerat justo ultrices nec. Nunc lobortis, purus id convallis euismod, lorem odio vestibulum eros, eget feugiat ante risus accumsan ex."
+          desc={`To ensure project success, I first understand the project requirements, scope, and goals, then create a detailed project plan outlining the timeline, budget, resources, and milestones, followed by planning the application's architecture, including data models, components, and interactions, and finally determining the optimal technology stack, frameworks, and tools to be used.`}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -27,7 +27,7 @@ export function Process() {
         <Card 
           title="Development & Progress Update" 
           icon={<AceternityIcon order="Phase 2"/>}
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod mauris, at placerat justo ultrices nec. Nunc lobortis, purus id convallis euismod, lorem odio vestibulum eros, eget feugiat ante risus accumsan ex."
+          desc="I design the user interface (UI) and user experience (UX), considering layout, navigation, and visual elements, write clear and concise content for the app, including labels, buttons, and error messages, develop the app using the chosen programming languages and frameworks, and implement features, functionality, and business logic."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -44,7 +44,7 @@ export function Process() {
         <Card 
           title="Development Launch" 
           icon={<AceternityIcon order="Phase 3"/>}
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod mauris, at placerat justo ultrices nec. Nunc lobortis, purus id convallis euismod, lorem odio vestibulum eros, eget feugiat ante risus accumsan ex."
+          desc="During the testing and launch phase, I conduct extensive testing, including unit tests, integration tests, and user acceptance tests, to identify and resolve any issues or bugs. Once the app is thoroughly vetted and optimized, I deploy it to a reliable hosting platform, making it accessible to users online, and monitor its performance to ensure a smooth and successful launch."
         >
           <CanvasRevealEffect
             animationSpeed={3}

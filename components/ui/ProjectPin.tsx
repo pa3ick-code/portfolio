@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 interface ProjectPinProps{
@@ -5,9 +7,10 @@ interface ProjectPinProps{
     des: string;
     img: string;
     iconLists?: string[];
+    link: string
 }
 
-export default function ProjectPin({title, des, img, iconLists}: ProjectPinProps) {
+export default function ProjectPin({title, des, img, iconLists, link}: ProjectPinProps) {
   return (
     <>
      <div className="flex basis-full flex-col p-2 tracking-tight text-slate-100/50 sm:basis-1/2 sm:w-[570px] w-[20rem]">
@@ -36,7 +39,7 @@ export default function ProjectPin({title, des, img, iconLists}: ProjectPinProps
                 ))}
             </div>
             <div className='flex justify-center items-center'>
-                <p className="flex text-purple text-sm lg:text-sm md:text-xs">Check Live Site</p>
+                <Link href={link} className="flex text-purple text-sm lg:text-sm md:text-xs">Check Live Site</Link>
                 <HiOutlineExternalLink  className='ms-3' color='#cbacf9' />
             </div>
         </div>

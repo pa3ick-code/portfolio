@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+// import Lottie from "lottie-react";
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./BackgroundGradient";
 import { GlobeDemo } from "./GridGlobe";
@@ -48,7 +49,7 @@ export const BentoGridItem = ({
   spareImg? : string;
 }) => {
 
-  const leftLists = ["ReactJS", "Express", "Typescript"];
+  const leftLists = ["ReactJS", "Typescript", "React Native"];
   const rightLists = ["NextJs", "Threejs", "GraphQL"];
 
   const [copied, setCopied] = useState(false);
@@ -146,7 +147,7 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className="absolute -bottom-5 right-0">
-                <Lottie options={defaultOptions}/>
+                {/* <Lottie options={defaultOptions}/> */}
               </div>
               <MagicButton
                 text={copied ? "Email is Copied!" : "Copy my email address"}

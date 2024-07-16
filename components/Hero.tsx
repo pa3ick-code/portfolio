@@ -1,3 +1,4 @@
+'use client';
 import { FaLocationArrow } from "react-icons/fa6";
 import { 
   Spotlight,
@@ -7,7 +8,7 @@ import {
   } from "./ui";
 
 
-export default function Hero() {
+export default function Hero({getRef}: {getRef: any}) {
   return (
     <div className="pb-20 pt-36">
       <div>
@@ -19,22 +20,25 @@ export default function Hero() {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h1 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-              I love what I do
+              Hello 👋🏽, I&apos;m Patrick
           </h1>
 
           <TextGenerateEffect 
               className="text-center text-[40px] md:text-5xl lg:text-6xl"
-              words="Self-taught Front End Developer,  School-taught Software Engineer"
+              words="Coding With 🔥Passion, Creating With Purpose."
           />
 
-          <p className="text-center text-sm md:text-lg lg:text-2xl mb-4 md:tracking-wider">
-              I&apos;m Patrick, NextJs developer based in Lagos, Nigeria.
+          <p className="text-center text-sm md:text-lg lg:text-2xl mb-7 md:tracking-wider">
+              I&apos;m a NextJs developer, based in Lagos, Nigeria.
           </p>
 
           <MagicButton 
             text="Explore My Portfolio"
             icon={ <FaLocationArrow/> }
             iconPosition="right"
+            handleClick={()=>{
+              getRef.current?.scrollIntoView({behavior: 'smooth'})
+            }}
           />
         </div>
       </div>

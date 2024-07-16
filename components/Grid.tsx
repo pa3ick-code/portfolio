@@ -1,9 +1,9 @@
 import { gridItems } from '@/data';
 import { BentoGrid, BentoGridItem } from './ui';
 
-export default function Grid() {
+export default function Grid({getRef}: {getRef: any}) {
   return (
-    <section id="about">
+    <div id="about" ref={getRef}>
       <BentoGrid className="w-full py-20">
         {
           gridItems.map( ({id, title, titleClassName, description, className, img, imgClassName, spareImg}) =>(
@@ -21,6 +21,6 @@ export default function Grid() {
           ))
         }
       </BentoGrid>
-    </section>
+    </div>
   );
 }

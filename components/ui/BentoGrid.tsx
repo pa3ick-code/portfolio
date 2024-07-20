@@ -4,10 +4,10 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 // import Lottie from "lottie-react";
 import { cn } from "@/utils/cn";
-import { BackgroundGradientAnimation } from "./BackgroundGradient";
 import { GlobeDemo } from "./GridGlobe";
 import animationData from "@/data/confetti.json"
 import MagicButton from "./MagicButton";
+import { BackgroundGradient } from "./BackgroundGradient";
 
 export const BentoGrid = ({
   className,
@@ -98,9 +98,9 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-              {/* <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"/> */}
-          </BackgroundGradientAnimation>
+          <BackgroundGradient>
+              <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"/>
+          </BackgroundGradient>
         )}
         <div className={cn(
           titleClassName, 
@@ -163,3 +163,4 @@ export const BentoGridItem = ({
     </div>
   );
 };
+

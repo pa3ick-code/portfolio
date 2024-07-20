@@ -3,7 +3,7 @@ import GridAndDots from "./GridAndDots";
 import { TextGenerateEffect } from "./TextGenerator";
 import MagicButton from "./MagicButton";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
-import { BackgroundGradientAnimation } from "./BackgroundGradient";
+import { BackgroundGradient } from "./BackgroundGradient";
 
 export{
     Spotlight,
@@ -12,5 +12,5 @@ export{
     MagicButton,
     BentoGrid,
     BentoGridItem,
-    BackgroundGradientAnimation,
+    BackgroundGradient,
 }

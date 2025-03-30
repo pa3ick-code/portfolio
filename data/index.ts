@@ -72,11 +72,12 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Car Hub - Car Rental",
-    des: "An intuitive online platform for renting cars, enabling users to easily search, compare rates, and reserve vehicles from multiple providers.",
+    title: "Hire Shere - AI powered interview",
+    des: "An AI-driven interview platform designed for remote workers to assess their strengths and weaknesses.",
     img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-    link: "car-hub01",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+    link: "https://hire-sphere-tau.vercel.app",
+    tag: "Hire-Shere"
   },
   {
     id: 2,
@@ -84,7 +85,8 @@ export const projects = [
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "vidconfapp",
+    link: "https://vidconfapp.netlify.app/",
+    tag: "Woom",
   },
   {
     id: 3,
@@ -92,7 +94,8 @@ export const projects = [
     des: "A Finance management web application with transfer & credits system using the latest tech stack.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/dwolla.svg", "/c.svg"],
-    link: "financewebapplication",
+    link: "https://financewebapplication.netlify.app/",
+    tag: "Finance",
   },
   {
     id: 4,
@@ -100,7 +103,8 @@ export const projects = [
     des: "A minimalist blog featuring a collection of articles and stories, presented in a clean and simple layout, allowing readers to easily navigate and engage with the content.",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/gsap.svg"],
-    link: "blogpost01",
+    link: "https://blogpost01.netlify.app/",
+    tag: "Blog",
   },
 ];
 

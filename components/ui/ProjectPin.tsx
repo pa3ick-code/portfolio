@@ -39,7 +39,7 @@ export default function ProjectPin({title, des, img, iconLists, link}: ProjectPi
                 ))}
             </div>
             <div className='flex justify-center items-center'>
-                <Link href={link} className="flex text-purple text-sm lg:text-sm md:text-xs">Check Live Site</Link>
+                <Link href={link} target="blank" className="flex text-purple text-sm lg:text-sm md:text-xs">Check Live Site</Link>
                 <HiOutlineExternalLink  className='ms-3' color='#cbacf9' />
             </div>
         </div>

@@ -12,13 +12,13 @@ export default function RecentProjects() {
         </span>
       </h1>
       <div className="flex flex-wrap justify-center items-center p-4 gap-24 mt-10">
-        {projects.map(({id, title, des, iconLists, img, link}) => (
+        {projects.map(({id, title, des, iconLists, img, link, tag}) => (
             <div 
               key={id} 
               className="w-[80vh] sm:w-[570px] h-[25rem] lg:min-h-[32.5rem] flex item-center justify-center"
-              onClick={()=> window.open(`https://${link}.netlify.app/`)}
+              onClick={()=> window.open(`${link}`)}
             >
-              <PinContainer title={link} href={link}>
+              <PinContainer title={tag} href={link}>
                 <ProjectPin 
                 title={title}
                 des={des}

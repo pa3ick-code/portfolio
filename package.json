@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "^10.0.5",
+    "@react-three/drei": "^9.87.1",
     "@react-three/fiber": "^9.1.0",
     "@tabler/icons-react": "^3.5.0",
     "clsx": "^2.1.1",
